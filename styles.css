@@ -1,0 +1,48 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #281241;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #d86806;
+    color: white;
+}
+
+/* Ürün listesinin görünümü */
+ul#product-list {
+    list-style-type: none; /* Liste noktalarını kaldırıyoruz */
+    padding: 0;
+    max-width: 800px;
+    margin: 20px auto; /* Listeyi ortalıyoruz */
+}
+
+/* Her ürün için <li> öğesi */
+ul#product-list li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge ile kart stili */
+    display: flex;
+    justify-content: space-between; /* Başlık ve fiyat farklı uçlarda olacak */
+    align-items: center;
+}
+
+/* Fiyatı yüksek olan ürünler için özel stil */
+ul#product-list li.expensive {
+    border-left: 5px solid red; /* Yüksek fiyatlı ürünlere kırmızı bir çizgi */
+    background-color: #ffe6e6;  /* Arka planı hafif kırmızı yapıyoruz */
+}
+
+/* Mobil cihazlar için responsive düzenleme */
+@media (max-width: 600px) {
+    ul#product-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+}
